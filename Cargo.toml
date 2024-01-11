@@ -1,9 +1,13 @@
 [package]
 name = "valorant-assets-api"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "API Wrapper for valorant-api.com"
 license = "MIT"
+repository = "https://github.com/raimannma/valorant-assets-api"
+authors = ["raimannma <raimannma@outlook.de>"]
+keywords = ["valorant", "api", "wrapper", "assets"]
+categories = ["asynchronous", "api-bindings", "web-programming::http-client"]
 
 [profile.release]
 strip = true  # Automatically strip symbols from the binary.
