@@ -2,6 +2,8 @@
 name = "static-valorant-api"
 version = "0.1.0"
 edition = "2021"
+description = "API Wrapper for valorant-api.com"
+license = "MIT"
 
 [profile.release]
 strip = true  # Automatically strip symbols from the binary.
