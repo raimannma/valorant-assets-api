@@ -4,6 +4,20 @@ use crate::models::language::Language;
 use url::Url;
 use uuid::Uuid;
 
+/// This function is used to get a list of ceremonies from the Valorant API.
+///
+/// # Arguments
+///
+/// * `client` - A reference to a reqwest::Client, which is used to send HTTP requests.
+/// * `language` - An Option that may contain a Language. If Some, this language is used as a query parameter.
+///
+/// # Returns
+///
+/// This function returns a Result that, if Ok, contains a Vec of Ceremonies.
+///
+/// # Errors
+///
+/// This function will return an Err if the HTTP request fails for any reason, or if the response cannot be parsed into an `APIResult<Vec<Ceremony>>`.
 pub async fn get_ceremonies(
     client: &reqwest::Client,
     language: Option<Language>,
@@ -22,6 +36,21 @@ pub async fn get_ceremonies(
         .map(|x| x.data)
 }
 
+/// This function is used to get a specific ceremony from the Valorant API.
+///
+/// # Arguments
+///
+/// * `client` - A reference to a reqwest::Client, which is used to send HTTP requests.
+/// * `ceremony` - A Uuid that represents the unique identifier of the ceremony.
+/// * `language` - An Option that may contain a Language. If Some, this language is used as a query parameter.
+///
+/// # Returns
+///
+/// This function returns a Result that, if Ok, contains a Ceremony.
+///
+/// # Errors
+///
+/// This function will return an Err if the HTTP request fails for any reason, or if the response cannot be parsed into an `APIResult<Ceremony>`.
 pub async fn get_ceremony(
     client: &reqwest::Client,
     ceremony: Uuid,

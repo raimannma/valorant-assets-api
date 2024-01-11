@@ -4,6 +4,20 @@ use crate::models::language::Language;
 use url::Url;
 use uuid::Uuid;
 
+/// This function is used to get a list of game modes from the Valorant API.
+///
+/// # Arguments
+///
+/// * `client` - A reference to a reqwest::Client, which is used to send HTTP requests.
+/// * `language` - An Option that may contain a Language. If Some, this language is used as a query parameter.
+///
+/// # Returns
+///
+/// This function returns a Result that, if Ok, contains a Vec of GameModes.
+///
+/// # Errors
+///
+/// This function will return an Err if the HTTP request fails for any reason, or if the response cannot be parsed into an `APIResult<Vec<GameMode>>`.
 pub async fn get_gamemodes(
     client: &reqwest::Client,
     language: Option<Language>,
@@ -22,6 +36,21 @@ pub async fn get_gamemodes(
         .map(|x| x.data)
 }
 
+/// This function is used to get a specific game mode from the Valorant API.
+///
+/// # Arguments
+///
+/// * `client` - A reference to a reqwest::Client, which is used to send HTTP requests.
+/// * `gamemode` - A Uuid that represents the unique identifier of the game mode.
+/// * `language` - An Option that may contain a Language. If Some, this language is used as a query parameter.
+///
+/// # Returns
+///
+/// This function returns a Result that, if Ok, contains a GameMode.
+///
+/// # Errors
+///
+/// This function will return an Err if the HTTP request fails for any reason, or if the response cannot be parsed into an `APIResult<GameMode>`.
 pub async fn get_gamemode(
     client: &reqwest::Client,
     gamemode: Uuid,
@@ -45,6 +74,20 @@ pub async fn get_gamemode(
         .map(|x| x.data)
 }
 
+/// This function is used to get a list of equippables for a specific game mode from the Valorant API.
+///
+/// # Arguments
+///
+/// * `client` - A reference to a reqwest::Client, which is used to send HTTP requests.
+/// * `language` - An Option that may contain a Language. If Some, this language is used as a query parameter.
+///
+/// # Returns
+///
+/// This function returns a Result that, if Ok, contains a Vec of GameModeEquippable.
+///
+/// # Errors
+///
+/// This function will return an Err if the HTTP request fails for any reason, or if the response cannot be parsed into an `APIResult<Vec<GameModeEquippable>>`.
 pub async fn get_gamemode_equippables(
     client: &reqwest::Client,
     language: Option<Language>,
@@ -63,6 +106,21 @@ pub async fn get_gamemode_equippables(
         .map(|x| x.data)
 }
 
+/// This function is used to get a specific equippable for a specific game mode from the Valorant API.
+///
+/// # Arguments
+///
+/// * `client` - A reference to a reqwest::Client, which is used to send HTTP requests.
+/// * `equippable` - A Uuid that represents the unique identifier of the equippable.
+/// * `language` - An Option that may contain a Language. If Some, this language is used as a query parameter.
+///
+/// # Returns
+///
+/// This function returns a Result that, if Ok, contains a GameModeEquippable.
+///
+/// # Errors
+///
+/// This function will return an Err if the HTTP request fails for any reason, or if the response cannot be parsed into an `APIResult<GameModeEquippable>`.
 pub async fn get_gamemode_equippable(
     client: &reqwest::Client,
     equippable: Uuid,

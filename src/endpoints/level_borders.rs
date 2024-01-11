@@ -4,6 +4,20 @@ use crate::models::level_border::LevelBorder;
 use url::Url;
 use uuid::Uuid;
 
+/// This function is used to get a list of level borders from the Valorant API.
+///
+/// # Arguments
+///
+/// * `client` - A reference to a reqwest::Client, which is used to send HTTP requests.
+/// * `language` - An Option that may contain a Language. If Some, this language is used as a query parameter.
+///
+/// # Returns
+///
+/// This function returns a Result that, if Ok, contains a Vec of LevelBorders.
+///
+/// # Errors
+///
+/// This function will return an Err if the HTTP request fails for any reason, or if the response cannot be parsed into an `APIResult<Vec<LevelBorder>>`.
 pub async fn get_level_borders(
     client: &reqwest::Client,
     language: Option<Language>,
@@ -22,6 +36,21 @@ pub async fn get_level_borders(
         .map(|x| x.data)
 }
 
+/// This function is used to get a specific level border from the Valorant API.
+///
+/// # Arguments
+///
+/// * `client` - A reference to a reqwest::Client, which is used to send HTTP requests.
+/// * `level_border` - A Uuid that represents the unique identifier of the level border.
+/// * `language` - An Option that may contain a Language. If Some, this language is used as a query parameter.
+///
+/// # Returns
+///
+/// This function returns a Result that, if Ok, contains a LevelBorder.
+///
+/// # Errors
+///
+/// This function will return an Err if the HTTP request fails for any reason, or if the response cannot be parsed into an `APIResult<LevelBorder>`.
 pub async fn get_level_border(
     client: &reqwest::Client,
     level_border: Uuid,

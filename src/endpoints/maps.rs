@@ -4,6 +4,20 @@ use crate::models::map::Map;
 use url::Url;
 use uuid::Uuid;
 
+/// This function is used to get a list of maps from the Valorant API.
+///
+/// # Arguments
+///
+/// * `client` - A reference to a reqwest::Client, which is used to send HTTP requests.
+/// * `language` - An Option that may contain a Language. If Some, this language is used as a query parameter.
+///
+/// # Returns
+///
+/// This function returns a Result that, if Ok, contains a Vec of Maps.
+///
+/// # Errors
+///
+/// This function will return an Err if the HTTP request fails for any reason, or if the response cannot be parsed into an `APIResult<Vec<Map>>`.
 pub async fn get_maps(
     client: &reqwest::Client,
     language: Option<Language>,
@@ -22,6 +36,21 @@ pub async fn get_maps(
         .map(|x| x.data)
 }
 
+/// This function is used to get a specific map from the Valorant API.
+///
+/// # Arguments
+///
+/// * `client` - A reference to a reqwest::Client, which is used to send HTTP requests.
+/// * `map` - A Uuid that represents the unique identifier of the map.
+/// * `language` - An Option that may contain a Language. If Some, this language is used as a query parameter.
+///
+/// # Returns
+///
+/// This function returns a Result that, if Ok, contains a Map.
+///
+/// # Errors
+///
+/// This function will return an Err if the HTTP request fails for any reason, or if the response cannot be parsed into an `APIResult<Map>`.
 pub async fn get_map(
     client: &reqwest::Client,
     map: Uuid,

@@ -4,6 +4,20 @@ use crate::models::language::Language;
 use url::Url;
 use uuid::Uuid;
 
+/// This function is used to get a list of bundles from the Valorant API.
+///
+/// # Arguments
+///
+/// * `client` - A reference to a reqwest::Client, which is used to send HTTP requests.
+/// * `language` - An Option that may contain a Language. If Some, this language is used as a query parameter.
+///
+/// # Returns
+///
+/// This function returns a Result that, if Ok, contains a Vec of Bundles.
+///
+/// # Errors
+///
+/// This function will return an Err if the HTTP request fails for any reason, or if the response cannot be parsed into an `APIResult<Vec<Bundle>>`.
 pub async fn get_bundles(
     client: &reqwest::Client,
     language: Option<Language>,
@@ -22,6 +36,21 @@ pub async fn get_bundles(
         .map(|x| x.data)
 }
 
+/// This function is used to get a specific bundle from the Valorant API.
+///
+/// # Arguments
+///
+/// * `client` - A reference to a reqwest::Client, which is used to send HTTP requests.
+/// * `bundle` - A Uuid that represents the unique identifier of the bundle.
+/// * `language` - An Option that may contain a Language. If Some, this language is used as a query parameter.
+///
+/// # Returns
+///
+/// This function returns a Result that, if Ok, contains a Bundle.
+///
+/// # Errors
+///
+/// This function will return an Err if the HTTP request fails for any reason, or if the response cannot be parsed into an `APIResult<Bundle>`.
 pub async fn get_bundle(
     client: &reqwest::Client,
     bundle: Uuid,

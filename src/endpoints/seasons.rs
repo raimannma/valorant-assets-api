@@ -4,6 +4,20 @@ use crate::models::season::{CompetitiveSeason, Season};
 use url::Url;
 use uuid::Uuid;
 
+/// This function is used to get a list of seasons from the Valorant API.
+///
+/// # Arguments
+///
+/// * `client` - A reference to a reqwest::Client, which is used to send HTTP requests.
+/// * `language` - An Option that may contain a Language. If Some, this language is used as a query parameter.
+///
+/// # Returns
+///
+/// This function returns a Result that, if Ok, contains a Vec of Seasons.
+///
+/// # Errors
+///
+/// This function will return an Err if the HTTP request fails for any reason, or if the response cannot be parsed into an `APIResult<Vec<Season>>`.
 pub async fn get_seasons(
     client: &reqwest::Client,
     language: Option<Language>,
@@ -22,6 +36,21 @@ pub async fn get_seasons(
         .map(|x| x.data)
 }
 
+/// This function is used to get a specific season from the Valorant API.
+///
+/// # Arguments
+///
+/// * `client` - A reference to a reqwest::Client, which is used to send HTTP requests.
+/// * `season` - A Uuid that represents the unique identifier of the season.
+/// * `language` - An Option that may contain a Language. If Some, this language is used as a query parameter.
+///
+/// # Returns
+///
+/// This function returns a Result that, if Ok, contains a Season.
+///
+/// # Errors
+///
+/// This function will return an Err if the HTTP request fails for any reason, or if the response cannot be parsed into an `APIResult<Season>`.
 pub async fn get_season(
     client: &reqwest::Client,
     season: Uuid,
@@ -41,6 +70,20 @@ pub async fn get_season(
         .map(|x| x.data)
 }
 
+/// This function is used to get a list of competitive seasons from the Valorant API.
+///
+/// # Arguments
+///
+/// * `client` - A reference to a reqwest::Client, which is used to send HTTP requests.
+/// * `language` - An Option that may contain a Language. If Some, this language is used as a query parameter.
+///
+/// # Returns
+///
+/// This function returns a Result that, if Ok, contains a Vec of CompetitiveSeasons.
+///
+/// # Errors
+///
+/// This function will return an Err if the HTTP request fails for any reason, or if the response cannot be parsed into an `APIResult<Vec<CompetitiveSeason>>`.
 pub async fn get_competitive_seasons(
     client: &reqwest::Client,
     language: Option<Language>,
@@ -59,6 +102,21 @@ pub async fn get_competitive_seasons(
         .map(|x| x.data)
 }
 
+/// This function is used to get a specific competitive season from the Valorant API.
+///
+/// # Arguments
+///
+/// * `client` - A reference to a reqwest::Client, which is used to send HTTP requests.
+/// * `season` - A Uuid that represents the unique identifier of the competitive season.
+/// * `language` - An Option that may contain a Language. If Some, this language is used as a query parameter.
+///
+/// # Returns
+///
+/// This function returns a Result that, if Ok, contains a CompetitiveSeason.
+///
+/// # Errors
+///
+/// This function will return an Err if the HTTP request fails for any reason, or if the response cannot be parsed into an `APIResult<CompetitiveSeason>`.
 pub async fn get_competitive_season(
     client: &reqwest::Client,
     season: Uuid,

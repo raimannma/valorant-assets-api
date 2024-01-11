@@ -1,23 +1,43 @@
+//! # Rust bindings for the [Valorant Assets API](https://valorant-api.com/)
+//!
+//! This crate provides Rust bindings for the [Valorant Assets API](https://valorant-api.com/).
+//!
+//! ## Installation
+//!
+//! Install this crate with `cargo add valorant-assets-api` or add it to your `Cargo.toml`.
+//!
+//! ## Usage
+//!
+//! ```rust
+//! use valorant_assets_api::agents::{get_agent, get_agents};
+//! use valorant_assets_api::models::language::Language;
+//!
+//! #[tokio::main]
+//! async fn main() {
+//!     // Create a reqwest::Client, which is used to send HTTP requests.
+//!     let client = reqwest::Client::new();
+//!
+//!     // Get a list of agents from the Valorant API. (language is optional)
+//!     let agents = get_agents(&client, Some(Language::DeDe), None)
+//!         .await
+//!         .expect("Failed to get agents");
+//!
+//!     println!(
+//!         "Agents: {:?}",
+//!         agents
+//!             .iter()
+//!             .map(|x| x.display_name.clone())
+//!             .collect::<Vec<_>>()
+//!     );
+//!
+//!     println!(
+//!         "Single Agent: {:#?}",
+//!         agents.first()
+//!     );
+//! }
+//! ```
+
 pub mod endpoints;
 pub mod models;
 
-pub use endpoints::agents;
-pub use endpoints::buddies;
-pub use endpoints::bundles;
-pub use endpoints::ceremonies;
-pub use endpoints::competitive_tiers;
-pub use endpoints::content_tiers;
-pub use endpoints::contracts;
-pub use endpoints::currencies;
-pub use endpoints::events;
-pub use endpoints::gamemodes;
-pub use endpoints::gears;
-pub use endpoints::level_borders;
-pub use endpoints::maps;
-pub use endpoints::player_cards;
-pub use endpoints::player_titles;
-pub use endpoints::seasons;
-pub use endpoints::sprays;
-pub use endpoints::themes;
-pub use endpoints::version;
-pub use endpoints::weapons;
+pub use endpoints::*;
