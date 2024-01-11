@@ -1,5 +1,5 @@
 [package]
-name = "static-valorant-api"
+name = "valorant-assets-api"
 version = "0.1.0"
 edition = "2021"
 description = "API Wrapper for valorant-api.com"
