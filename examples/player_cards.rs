@@ -1,5 +1,5 @@
-use static_valorant_api::models::language::Language;
-use static_valorant_api::player_cards::{get_player_card, get_player_cards};
+use valorant_assets_api::models::language::Language;
+use valorant_assets_api::player_cards::{get_player_card, get_player_cards};
 
 #[tokio::main]
 async fn main() {

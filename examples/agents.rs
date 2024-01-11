@@ -1,5 +1,5 @@
-use static_valorant_api::agents::{get_agent, get_agents};
-use static_valorant_api::models::language::Language;
+use valorant_assets_api::agents::{get_agent, get_agents};
+use valorant_assets_api::models::language::Language;
 
 #[tokio::main]
 async fn main() {

@@ -1,8 +1,8 @@
-use static_valorant_api::models::language::Language;
-use static_valorant_api::seasons::{
+use uuid::Uuid;
+use valorant_assets_api::models::language::Language;
+use valorant_assets_api::seasons::{
     get_competitive_season, get_competitive_seasons, get_season, get_seasons,
 };
-use uuid::Uuid;
 
 #[tokio::main]
 async fn main() {

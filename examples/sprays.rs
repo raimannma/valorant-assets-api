@@ -1,5 +1,5 @@
-use static_valorant_api::models::language::Language;
-use static_valorant_api::sprays::{get_spray, get_spray_level, get_spray_levels, get_sprays};
+use valorant_assets_api::models::language::Language;
+use valorant_assets_api::sprays::{get_spray, get_spray_level, get_spray_levels, get_sprays};
 
 #[tokio::main]
 async fn main() {

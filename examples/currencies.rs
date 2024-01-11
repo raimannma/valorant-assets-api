@@ -1,5 +1,5 @@
-use static_valorant_api::currencies::{get_currencies, get_currency};
-use static_valorant_api::models::language::Language;
+use valorant_assets_api::currencies::{get_currencies, get_currency};
+use valorant_assets_api::models::language::Language;
 
 #[tokio::main]
 async fn main() {

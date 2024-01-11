@@ -1,4 +1,4 @@
-use static_valorant_api::version::get_version;
+use valorant_assets_api::version::get_version;
 
 #[tokio::main]
 async fn main() {

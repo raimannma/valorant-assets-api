@@ -1,5 +1,5 @@
-use static_valorant_api::models::language::Language;
-use static_valorant_api::player_titles::{get_player_title, get_player_titles};
+use valorant_assets_api::models::language::Language;
+use valorant_assets_api::player_titles::{get_player_title, get_player_titles};
 
 #[tokio::main]
 async fn main() {

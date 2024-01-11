@@ -1,5 +1,5 @@
-use static_valorant_api::content_tiers::{get_content_tier, get_content_tiers};
-use static_valorant_api::models::language::Language;
+use valorant_assets_api::content_tiers::{get_content_tier, get_content_tiers};
+use valorant_assets_api::models::language::Language;
 
 #[tokio::main]
 async fn main() {

@@ -1,5 +1,5 @@
-use static_valorant_api::events::{get_event, get_events};
-use static_valorant_api::models::language::Language;
+use valorant_assets_api::events::{get_event, get_events};
+use valorant_assets_api::models::language::Language;
 
 #[tokio::main]
 async fn main() {

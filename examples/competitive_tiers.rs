@@ -1,6 +1,6 @@
-use static_valorant_api::competitive_tiers::{get_competitive_tier, get_competitive_tiers};
-use static_valorant_api::models::language::Language;
 use uuid::Uuid;
+use valorant_assets_api::competitive_tiers::{get_competitive_tier, get_competitive_tiers};
+use valorant_assets_api::models::language::Language;
 
 #[tokio::main]
 async fn main() {

@@ -1,5 +1,5 @@
-use static_valorant_api::contracts::{get_contract, get_contracts};
-use static_valorant_api::models::language::Language;
+use valorant_assets_api::contracts::{get_contract, get_contracts};
+use valorant_assets_api::models::language::Language;
 
 #[tokio::main]
 async fn main() {

@@ -1,5 +1,5 @@
-use static_valorant_api::models::language::Language;
-use static_valorant_api::themes::{get_theme, get_themes};
+use valorant_assets_api::models::language::Language;
+use valorant_assets_api::themes::{get_theme, get_themes};
 
 #[tokio::main]
 async fn main() {

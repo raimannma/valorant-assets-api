@@ -1,5 +1,5 @@
-use static_valorant_api::gears::{get_gear, get_gears};
-use static_valorant_api::models::language::Language;
+use valorant_assets_api::gears::{get_gear, get_gears};
+use valorant_assets_api::models::language::Language;
 
 #[tokio::main]
 async fn main() {

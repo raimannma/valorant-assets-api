@@ -1,5 +1,5 @@
-use static_valorant_api::maps::{get_map, get_maps};
-use static_valorant_api::models::language::Language;
+use valorant_assets_api::maps::{get_map, get_maps};
+use valorant_assets_api::models::language::Language;
 
 #[tokio::main]
 async fn main() {

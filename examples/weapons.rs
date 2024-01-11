@@ -1,5 +1,5 @@
-use static_valorant_api::models::language::Language;
-use static_valorant_api::weapons::{
+use valorant_assets_api::models::language::Language;
+use valorant_assets_api::weapons::{
     get_weapon, get_weapon_skinchroma, get_weapon_skinchromas, get_weapon_skinlevel,
     get_weapon_skinlevels, get_weapons,
 };

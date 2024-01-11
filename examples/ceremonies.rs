@@ -1,5 +1,5 @@
-use static_valorant_api::ceremonies::{get_ceremonies, get_ceremony};
-use static_valorant_api::models::language::Language;
+use valorant_assets_api::ceremonies::{get_ceremonies, get_ceremony};
+use valorant_assets_api::models::language::Language;
 
 #[tokio::main]
 async fn main() {

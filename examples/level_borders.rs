@@ -1,5 +1,5 @@
-use static_valorant_api::level_borders::{get_level_border, get_level_borders};
-use static_valorant_api::models::language::Language;
+use valorant_assets_api::level_borders::{get_level_border, get_level_borders};
+use valorant_assets_api::models::language::Language;
 
 #[tokio::main]
 async fn main() {

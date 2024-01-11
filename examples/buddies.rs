@@ -1,5 +1,5 @@
-use static_valorant_api::buddies::{get_buddies, get_buddy, get_buddy_level, get_buddy_levels};
-use static_valorant_api::models::language::Language;
+use valorant_assets_api::buddies::{get_buddies, get_buddy, get_buddy_level, get_buddy_levels};
+use valorant_assets_api::models::language::Language;
 
 #[tokio::main]
 async fn main() {

@@ -1,5 +1,5 @@
-use static_valorant_api::bundles::{get_bundle, get_bundles};
-use static_valorant_api::models::language::Language;
+use valorant_assets_api::bundles::{get_bundle, get_bundles};
+use valorant_assets_api::models::language::Language;
 
 #[tokio::main]
 async fn main() {

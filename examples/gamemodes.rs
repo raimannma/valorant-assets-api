@@ -1,7 +1,7 @@
-use static_valorant_api::gamemodes::{
+use valorant_assets_api::gamemodes::{
     get_gamemode, get_gamemode_equippable, get_gamemode_equippables, get_gamemodes,
 };
-use static_valorant_api::models::language::Language;
+use valorant_assets_api::models::language::Language;
 
 #[tokio::main]
 async fn main() {
