@@ -32,32 +32,32 @@ pub struct Agent {
 #[derive(Deserialize, Debug, Clone, PartialEq, Hash, Eq)]
 #[serde(rename_all = "camelCase")]
 pub struct AgentRole {
-    uuid: Uuid,
-    display_name: String,
-    description: String,
-    display_icon: String,
-    asset_path: String,
+    pub uuid: Uuid,
+    pub display_name: String,
+    pub description: String,
+    pub display_icon: String,
+    pub asset_path: String,
 }
 
 #[derive(Deserialize, Debug, Clone, PartialEq, Hash, Eq)]
 #[serde(rename_all = "camelCase")]
 pub struct AgentRecruitmentData {
-    counter_id: Uuid,
-    milestone_id: Uuid,
-    milestone_threshold: u64,
-    use_level_vp_cost_override: bool,
-    level_vp_cost_override: i64, // Maybe u64?
-    start_date: DateTime<Utc>,
-    end_date: DateTime<Utc>,
+    pub counter_id: Uuid,
+    pub milestone_id: Uuid,
+    pub milestone_threshold: u64,
+    pub use_level_vp_cost_override: bool,
+    pub level_vp_cost_override: i64, // Maybe u64?
+    pub start_date: DateTime<Utc>,
+    pub end_date: DateTime<Utc>,
 }
 
 #[derive(Deserialize, Debug, Clone, PartialEq, Hash, Eq)]
 #[serde(rename_all = "camelCase")]
 pub struct AgentAbility {
-    slot: AgentAbilitySlot,
-    display_name: String,
-    description: String,
-    display_icon: Option<String>,
+    pub slot: AgentAbilitySlot,
+    pub display_name: String,
+    pub description: String,
+    pub display_icon: Option<String>,
 }
 
 #[derive(Deserialize, Debug, Clone, PartialEq, Hash, Eq)]
