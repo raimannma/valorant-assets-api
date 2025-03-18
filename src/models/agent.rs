@@ -11,7 +11,7 @@ pub struct Agent {
     pub developer_name: String,
     pub character_tags: Option<Vec<String>>,
     pub display_icon: String,
-    pub display_icon_small: String,
+    pub display_icon_small: Option<String>,
     pub bust_portrait: Option<String>,
     pub full_portrait: Option<String>,
     pub full_portrait_v2: Option<String>,
